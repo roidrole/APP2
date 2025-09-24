@@ -3,6 +3,15 @@
 const int SIN_SUMMAND_AMOUNT = 3;
 const int COS_SUMMAND_AMOUNT = 3;
 
+//Libraries
+int factorielle(int n) {
+    int total = 1;
+    for(int i=1; i <= n;){
+        total *= i;
+        i++;
+    }
+    return total;
+}
 
 int findChar(char word[], char character){
     for (int i = 0; word[i] != 0; i++){
@@ -12,8 +21,6 @@ int findChar(char word[], char character){
     }
     return -1;
 }
-
-
 
 int palindromeCheck(char string[]){
     int stringLength = findChar(string,0);
@@ -33,7 +40,7 @@ int palindromeCheck(char string[]){
 float sin(float in){
     float output = 0;
     for (int i = 0; i < SIN_SUMMAND_AMOUNT; i++){
-        output += (i^(2*i+1))/factorial(i);
+        output += (i^(2*i+1))/factorielle(i);
     }
     return output;
 }
