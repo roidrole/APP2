@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+int main(){
+    printf("%d", findChar("you_mom_is_hat", 'a'));
+}
 
 int findChar(char word[], char character){
     for (int i = 0; word[i] != 0; i++){
@@ -8,8 +11,4 @@ int findChar(char word[], char character){
         }
     }
     return -1;
-}
-
-int main(){
-    printf("%d", findChar("you_mom_is_hat", 'a'));
 }
