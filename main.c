@@ -14,11 +14,13 @@ int factorielle(int n) {
 }
 
 int findChar(char word[], char character){
-    for (int i = 0; word[i] != 0; i++){
+    int i = -1;
+    do {
+        i++;
         if(word[i] == character){
             return i;
         }
-    }
+    } while (word[i] != 0);
     return -1;
 }
 
@@ -45,9 +47,15 @@ float sin(float in){
     return output;
 }
 
+
 int main(){
+    printf("findChar\n");
     printf("%d", findChar("you_mom_is_hat", 'a'));
+    printf("\n");
+    printf("%d", findChar("you_mom_is_hat", 'y'));
+    printf("\n");
     
+    printf("palindromeCheck\n");
     printf("\n");
     printf("%d",palindromeCheck("a"));
     printf("\n");
