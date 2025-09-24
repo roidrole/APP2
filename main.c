@@ -14,6 +14,22 @@ int findChar(char word[], char character){
 }
 
 
+
+int palindromeCheck(char string[]){
+    int stringLength = findChar(string,0);
+    int j = 0;
+    for(int i = 0;i > stringLength;)
+    {
+        j = (stringLength - i);
+        if(string[i] != string[j])
+        {
+            return 0;
+        }
+        i++;
+    }
+    return 1;
+}
+
 float sin(float in){
     float output = 0;
     for (int i = 0; i < SIN_SUMMAND_AMOUNT; i++){
@@ -24,4 +40,17 @@ float sin(float in){
 
 int main(){
     printf("%d", findChar("you_mom_is_hat", 'a'));
+    
+    printf("\n");
+    printf("%d",palindromeCheck("a"));
+    printf("\n");
+    printf("%d",palindromeCheck("aabb"));
+    printf("\n");
+    printf("%d",palindromeCheck("aba"));
+    printf("\n");
+    printf("%d",palindromeCheck("abab"));
+    printf("\n");
+    printf("%d",palindromeCheck("aabbaa"));
+    printf("\n");
+    printf("%d",palindromeCheck(""));
 }
