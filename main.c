@@ -2,12 +2,16 @@
 
 const int SIN_SUMMAND_AMOUNT = 9;
 const int COS_SUMMAND_AMOUNT = SIN_SUMMAND_AMOUNT;
+//Size of square matrixes for multiplication and number of column for addition
+const int n = 3;
+//Number of rows of the matixes for addition
+const int m = 3;
 const float PI = 3.1415926535897932384626433832795;
 
 //Libraries
-int factorielle(int n) {
+int factorielle(int in) {
     int total = 1;
-    for(int i=1; i <= n;i++){
+    for(int i=1; i <= in;i++){
         total *= i;
     }
     return total;
@@ -75,9 +79,39 @@ float cos(float in){
     return out;
 }
 
+void matrixAddPrinter(int matrice[m][n]){
+    printf("\n");
+    printf("Added matrix:\n");
+    for(int Y = 0; Y < n;Y++)
+    {
+        for(int X = 0; X < m;X++)
+        {
+            printf("%d ", matrice[X][Y]);
+        }
+        printf("\n");
+    }
+}
 
+void matrixMultPrinter(int matrice[n][n]){
+    printf("\n");
+    printf("Multiplied matrix:\n");
+    for(int Y = 0; Y < n;Y++)
+    {
+        for(int X = 0; X < n;X++)
+        {
+            printf("%d ", matrice[X][Y]);
+        }
+        printf("\n");
+    }
+}
 
-
+void matrixAdder(int a[m][n], int b[m][n], int out[m][n]){
+    for (int row = 0; row < m; row++){
+        for (int col = 0; col < n; col++){
+            out[row][col] = a[row][col] + b[row][col];
+        }
+    }
+}
 
 
 
@@ -108,13 +142,6 @@ int main(){
     printf("%d",palindromeCheck(""));
     printf("\n");
 
-    int number = 5;
-    printf("exponent:%f\n", exponent(-PI, number));
-    printf("factorielle:%d\n", factorielle(number));
-    printf("floatorielle:%f\n", (float)factorielle(number));
-    printf("division:%f\n", exponent(-PI, number)/(float)factorielle(number));
-    printf("\n");
-
     printf("****sin*****\n");
     printf("%f",sin(0));
     printf("\n");
@@ -137,4 +164,18 @@ int main(){
     printf("%f",cos(PI/2));
     printf("\n");
     printf("%f",cos(PI/4));
+
+    int out[m][n] = {};
+    int a[m][n];
+    int b[m][n];
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            a[i][j] = 1;
+            b[i][j] = 1;
+        }
+    }
+    matrixAddPrinter(a);
+    matrixAddPrinter(b);
+    matrixAdder(a, b, out);
+    matrixAddPrinter(out);
 }
