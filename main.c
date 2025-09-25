@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Setting these to values such that 2*(value-1) + 1 ­>= 17 results in int overflow
+//Could use long/unsinged int for more possible values
 const int SIN_SUMMAND_AMOUNT = 9;
 const int COS_SUMMAND_AMOUNT = SIN_SUMMAND_AMOUNT;
 //Size of square matrixes for multiplication and number of column for addition
@@ -72,8 +74,7 @@ float sin(float in){
 
 float cos(float in){
     float out = 0;
-    for(int i = 0; i <COS_SUMMAND_AMOUNT; i++)
-    {
+    for(int i = 0; i <COS_SUMMAND_AMOUNT; i++){
         out += getSign(i)*exponent(in, 2*i)/factorielle(2*i);
     }
     return out;
@@ -143,27 +144,18 @@ int main(){
     printf("\n");
 
     printf("****sin*****\n");
-    printf("%f",sin(0));
-    printf("\n");
-    printf("%f",sin(1));
-    printf("\n");
-    printf("%f",sin(-PI));
-    printf("\n");
-    printf("%f",sin(PI/2));
-    printf("\n");
-    printf("%f",sin(PI/4));
-    printf("\n");
+    printf("%f\n",sin(0));
+    printf("%f\n",sin(1));
+    printf("%f\n",sin(-PI));
+    printf("%f\n",sin(PI/2));
+    printf("%f\n",sin(PI/4));
 
     printf("****cos*****\n");
-    printf("%f",cos(0));
-    printf("\n");
-    printf("%f",cos(1));
-    printf("\n");
-    printf("%f",cos(-PI));
-    printf("\n");
-    printf("%f",cos(PI/2));
-    printf("\n");
-    printf("%f",cos(PI/4));
+    printf("%f\n",cos(0));
+    printf("%f\n",cos(1));
+    printf("%f\n",cos(-PI));
+    printf("%f\n",cos(PI/2));
+    printf("%f\n",cos(PI/4));
 
     int out[m][n] = {};
     int a[m][n];
