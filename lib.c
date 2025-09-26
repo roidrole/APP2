@@ -7,8 +7,12 @@ Description: Librairies nécessaires au fonctionnement d'autres fonctions
 ********/
 
 
-
-int factorielle(int in) {
+// Description: fonction qui vérifie si le mot provenu est un palindrome
+// Préconditions:
+// - in doit être inférieur ou égal à 12
+// Postconditions: 
+// - retourne 1 si le tableau de charactères contient un palindrome, et retounre 0 sinon
+__u_int factorielle(int in) {
     int total = 1;
     for(int i=1; i <= in;i++){
         total *= i;

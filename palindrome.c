@@ -6,6 +6,11 @@ Date: 24 Septembre 2025
 Description: Vérifie si le mot provenu est un palindrome
 ********/
 
+// Description: fonction qui vérifie si le mot provenu est un palindrome
+// Préconditions:
+// - le tableau de charactères doit contenir seulement des lettres arabes minuscules sans accents
+// Postconditions: 
+// - retourne 1 si le tableau de charactères contient un palindrome, et retourne 0 sinon
 int palindromeCheck(char string[]){
     int stringLength = findChar(string,0);
     int j = stringLength;

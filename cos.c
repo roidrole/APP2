@@ -6,7 +6,12 @@ Date: 24 Septembre 2025
 Description: Calcule le cosinus d'une valeur
 ********/
 
-const int COS_SUMMAND_AMOUNT = 9;
+//Une valeur supérieure à 9 brise la précondition de lib.fatorielle(2*i)
+const int COS_SUMMAND_AMOUNT = 6;
+
+//Description: fonction qui calcule le cosinus
+//Préconditions : La valeur entrante doit être entre -π et π
+//Postconditions : Retourne une valeur entre 1 et -1
 
 float cos(float in){
     float out = 0;

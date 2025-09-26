@@ -73,9 +73,6 @@ void matrixMultPrinter(int matrice[n][n]){
     }
 }
 
-
-
-
 int main(){
     printf("findChar\n");
     printf("%d\n", findChar("you_mom_is_hat", 'a'));
@@ -88,10 +85,19 @@ int main(){
     printf("%d\n",palindromeCheck("aabbaa"));
     printf("%d\n",palindromeCheck(""));
 
+    printf("factorielle\n");
+    printf("%d\n", factorielle(1));
+    printf("%d\n", factorielle(5));
+    printf("%d\n", factorielle(10));
+    printf("%d\n", factorielle(12));
+    //Ne donne pas la valeur de 13!
+    printf("%d\n", factorielle(13));
+    
     printf("****sin*****\n");
     printf("%f\n",sin(0));
     printf("%f\n",sin(1));
     printf("%f\n",sin(-PI));
+    printf("%f\n",sin(PI));
     printf("%f\n",sin(PI/2));
     printf("%f\n",sin(PI/4));
 
@@ -99,6 +105,7 @@ int main(){
     printf("%f\n",cos(0));
     printf("%f\n",cos(1));
     printf("%f\n",cos(-PI));
+    printf("%f\n",cos(PI));
     printf("%f\n",cos(PI/2));
     printf("%f\n",cos(PI/4));
     

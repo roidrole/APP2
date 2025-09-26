@@ -6,7 +6,11 @@ Date: 24 Septembre 2025
 Description: Calcule le cosinus d'une valeur.
 ********/
 
-const int SIN_SUMMAND_AMOUNT = 9;
+const int SIN_SUMMAND_AMOUNT = 5;
+
+//Description: fonction qui calcule le sinus
+//Préconditions : La valeur entrante doit être entre -π et π
+//Postconditions : Retourne une valeur entre 1 et -1
 
 float sin(float in){
     float output = 0;

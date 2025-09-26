@@ -13,8 +13,11 @@ const int n = 3;
 const int m = 3;
 
 // Description: fonction qui additionne deux matrices de taille m par n
+//Préconditions
 // - Les trois matrices doivent être de taille n × m
 // - les deux premières matrices doivent contenir des valeurs telles que leur somme est entre -2147483648 et 2147483647.
+//Postconditions : 
+//La matrice out contient des valeurs entre -2147483648 et 2147483647 qui sont la somme des valeurs de a et b.
 void matrixAdder(int a[m][n], int b[m][n], int out[m][n]){
     for (int row = 0; row < m; row++){
         for (int col = 0; col < n; col++){
