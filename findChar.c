@@ -5,6 +5,7 @@ Auteurs: Raphaël Denicourt denr6130
 Date: 24 Septembre 2025
 Description: trouve la position de première instance d'un charactère dans un tableau de charactères
 ********/
+#include <stdio.h>
 
 // Description: fonction qui trouve la position de première instance d'un charactère dans un tableau de charactères
 // Préconditions: 
@@ -21,4 +22,24 @@ int findChar(char word[], char character){
         }
     } while (word[i] != 0);
     return -1;
+}
+
+//Description: fonction de test
+//Postconditions: 1 si le test échoue,  0 en réussite
+int main()
+{
+    int result = 0;
+    if(findChar("you_mom_is_hat", 'a') != 12)
+    {
+        result = 1;
+    }
+    if(findChar("you_mom_is_hat", 'y') != 0)
+    {
+        result = 1;
+    }
+    if(findChar("you_mom_is_hat", 'z') != -1)
+    {
+        result = 1;
+    }
+    printf("\n findChar: %d\n",result);
 }

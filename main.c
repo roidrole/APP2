@@ -8,7 +8,6 @@ Description: Fichier responsable de tester les fonctions des autres fichiers
 
 #include <stdio.h>
 //#include "lib.c" 
-#include "lib.c"
 #include "findChar.c"
 #include "palindrome.c"
 #include "sin.c"
@@ -20,36 +19,6 @@ Description: Fichier responsable de tester les fonctions des autres fichiers
 //Setting these to values such that 2*(value-1) + 1 ­>= 17 results in int overflow
 //Could use long/unsinged int for more possible values
 const float PI = 3.1415926535897932384626433832795;
-/*
-//Libraries
-int factorielle(int in) {
-    int total = 1;
-    for(int i=1; i <= in;i++){
-        total *= i;
-    }
-    return total;
-}
-
-double exponent(double base, int exponent){
-    if(exponent == 0){
-        return 1;
-    }
-    const double multiplier = base;
-    for (int i = 1; i < exponent; i++){
-        base *= multiplier;
-    }
-    return base;
-}
-
-//A function that returns -1 if input is event, or 1 if input is odd.
-int getSign(int input){
-    if(input % 2 == 0){
-        return 1;
-    } else {
-        return -1;
-    }
-}
-*/
 
 void matrixAddPrinter(int matrice[m][n]){
     for(int x = 0; x < n;x++)
@@ -73,7 +42,7 @@ void matrixMultPrinter(int matrice[n][n]){
     }
 }
 
-int main(){
+int main_2(){
     printf("findChar\n");
     printf("%d\n", findChar("you_mom_is_hat", 'a'));
     printf("%d\n", findChar("you_mom_is_hat", 'y'));
@@ -84,7 +53,7 @@ int main(){
     printf("%d\n",palindromeCheck("abab"));
     printf("%d\n",palindromeCheck("aabbaa"));
     printf("%d\n",palindromeCheck(""));
-
+    
     printf("factorielle\n");
     printf("%d\n", factorielle(1));
     printf("%d\n", factorielle(5));
@@ -118,8 +87,6 @@ int main(){
             b[i][j] = i*2+1;
         }
     }
-    //a[0][0] = 0;
-    a[0][1] = 2;
     printf("\nMatrix a:\n");
     matrixAddPrinter(a);
     printf("\nMatrix b:\n");

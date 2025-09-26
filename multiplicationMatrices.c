@@ -6,8 +6,10 @@ Date: 26 Septembre 2025
 Description: Multiplie ensemble deux matrices carrés de taille n par n
 ********/
 
+#include <stdio.h>
+
 //Dimension des matrices carrées à multiplier (n × n)
-//const int n = 3;
+const int n = 3;
 
 // Description: fonction qui multiplie ensemble deux matrices de taille n par n
 // Préconditions: 
@@ -15,7 +17,7 @@ Description: Multiplie ensemble deux matrices carrés de taille n par n
 // - les deux premières matrices doivent contenir des valeurs telles que les valeurs de la matrice produite soient toutes entre -2147483648 et 2147483647.
 // Postconditions: 
 // - La matrice 
-void matrixMutliplier(int a[n][n], int b[n][n], int out[n][n]){
+void matrixMultiplier(int a[n][n], int b[n][n], int out[n][n]){
     for (int row = 0; row < n; row++){
         for (int col = 0; col < n; col++){
             out[row][col] = 0;
@@ -24,4 +26,31 @@ void matrixMutliplier(int a[n][n], int b[n][n], int out[n][n]){
             }
         }
     }
+}
+
+//Description: fonction de test
+//Postconditions: 1 si le test échoue,  0 en réussite
+int main()
+{
+    int result = 0;
+    int out[n][n] = {};
+    int a[n][n];
+    int b[n][n];
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            a[i][j] = i+j;
+            b[i][j] = i*2+1;
+        }
+    }
+    matrixMultiplier(a, b, out);
+    int test[3][3] = {{13,13,13},{22,22,22},{31,31,31}};
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            if(out[i][j] != test[i][j])
+            {
+                result = 1;
+            }
+        }
+    }
+    printf("\n matrixMultiplier: %d\n",result);
 }
