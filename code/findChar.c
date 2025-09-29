@@ -43,9 +43,8 @@ int main()
         result = 1;
     }
     printf("\n findChar: %d\n",result);*/
-    printf("Voulez-vous faire un don à l'université de Sherbrooke?\n");
-    printf("Recherche du charactere n dans anticonstitutionnellement. Attendu 1. Resultat: %d\n",findChar("anticonstitutionnellement",'n'));
-    printf("Recherche du charactere e dans bonjour. Attendu -1. Resultat: %d\n",findChar("bonjour",'e'));
-    printf("Recherche du charactere r dans bonjour. Attendu 6. Resultat: %d\n",findChar("bonjour",'r'));
-    printf("Recherche du charactere a dans allocommentcava. Attendu 0. Resultat: %d\n",findChar("allocommentcava",'a'));
+    printf("Recherche du charactere n dans \"anticonstitutionnellement\". Attendu 1. Resultat: %d\n",findChar("anticonstitutionnellement",'n'));
+    printf("Recherche du charactere e dans \"bonjour\". Attendu -1. Resultat: %d\n",findChar("bonjour",'e'));
+    printf("Recherche du charactere r dans \"bonjour\". Attendu 6. Resultat: %d\n",findChar("bonjour",'r'));
+    printf("Recherche du charactere a dans \"allocommentcava\". Attendu 0. Resultat: %d\n",findChar("allocommentcava",'a'));
 }
