@@ -67,9 +67,9 @@ int main()
 {
     printf("Tests pour le sinus");
     printf("Pour %f: Attendu: %f, Recu: %f\n", 0, sin(0), sinus(0));
-    printf("Pour %f: Attendu: %f, Recu: %f\n", 0, sin(1), sinus(1));
-    printf("Pour %f: Attendu: %f, Recu: %f\n", 0, sin(-PI), sinus(-PI));
-    printf("Pour %f: Attendu: %f, Recu: %f\n", 0, sin(PI), sinus(PI));
-    printf("Pour %f: Attendu: %f, Recu: %f\n", 0, sin(PI/2), sinus(PI/2));
-    printf("Pour %f: Attendu: %f, Recu: %f\n", 0, sin(PI/4), sinus(PI/4));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", 1, sin(1), sinus(1));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", -PI, sin(-PI), sinus(-PI));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", PI, sin(PI), sinus(PI));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", PI/2, sin(PI/2), sinus(PI/2));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", PI/4, sin(PI/4), sinus(PI/4));
 }
