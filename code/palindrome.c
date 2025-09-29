@@ -44,7 +44,6 @@ int palindromeTest(char string[]){
 }
 
 //Description: fonction de test
-//Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
     printf("Tests pour la recherche de de palindromes:\n");

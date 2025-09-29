@@ -61,7 +61,6 @@ float cosinus(float in){
 }
 
 //Description: fonction de test
-//Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
     printf("Tests pour le cosinus\n");
