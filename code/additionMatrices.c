@@ -53,7 +53,6 @@ int main()
     }
     matriceAddition(a, b, out);
     
-    int result = 0;
     int test[3][3] = {{10,10,10},{10,10,10},{10,10,10}};
     
     printf("Tests pour l'addition de matrices: \n");

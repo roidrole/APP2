@@ -43,7 +43,6 @@ void matriceMultPrinter(int matrice[n][n]){
 //Description: fonction de test
 int main()
 {
-    int result = 0;
     int out[n][n] = {};
     int a[n][n];
     int b[n][n];
