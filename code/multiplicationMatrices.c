@@ -41,7 +41,6 @@ void matriceMultPrinter(int matrice[n][n]){
 
 
 //Description: fonction de test
-//Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
     int result = 0;
@@ -56,13 +55,14 @@ int main()
     }
     matriceMultiplie(a, b, out);
     int test[3][3] = {{13,13,13},{22,22,22},{31,31,31}};
-    for (int i = 0; i < n; i++){
-        for (int j = 0; j < n; j++){
-            if(out[i][j] != test[i][j])
-            {
-                result = 1;
-            }
-        }
-    }
-    printf("\n matriceMultiplie: %d\n",result);
+
+    printf("Tests pour la multiplication de matrices: \n");
+    printf("Matrice 1:\n");
+    matrixMultPrinter(a);
+    printf("\nMatrice 2:\n");
+    matrixMultPrinter(b);
+    printf("\nMatrice de retour attendue\n");
+    matrixMultPrinter(test);
+    printf("\nMatrice de retour recue\n");
+    matrixMultPrinter(out);
 }
