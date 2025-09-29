@@ -65,23 +65,6 @@ float sinus(float in){
 //Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
-    printf("Sinus: \n");
-    printf("Valeur entrante: 1\n");
-    printf("Valeur attendue: 0,8415\n");
-    printf("Valeur sortante: %f\n", sinus(1));
-    printf("Sinus: \n");
-    printf("Valeur entrante: 0\n");
-    printf("Valeur attendue: 0\n");
-    printf("Valeur sortante: %f\n", sinus(0));
-    printf("Sinus: \n");
-    printf("Valeur entrante: PI/4\n");
-    printf("Valeur attendue: 0,7071\n");
-    printf("Valeur sortante: %f\n", sinus(PI/4));
-    printf("Sinus: \n");
-    printf("Valeur entrante: PI/2\n");
-    printf("Valeur attendue: 1\n");
-    printf("Valeur sortante: %f\n", sinus(PI/2));
-    /*
     int result = 0;
     if(fabs(sinus(0)-sin(0)) > 0.01)
     {
@@ -108,5 +91,5 @@ int main()
         result = 1;
     }
     printf("\n sinus: %d\n",result);
-    */
+    
 }
