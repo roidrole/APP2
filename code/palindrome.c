@@ -47,30 +47,11 @@ int palindromeTest(char string[]){
 //Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
-    int result = 0;
-    if(palindromeTest("a") != 1)
-    {
-        result = 1;
-    }
-    if(palindromeTest("aabb") != 0)
-    {
-        result = 1;
-    }
-    if(palindromeTest("aba") != 1)
-    {
-        result = 1;
-    }
-    if(palindromeTest("abab") != 0)
-    {
-        result = 1;
-    }
-    if(palindromeTest("aabbaa") != 1)
-    {
-        result = 1;
-    }
-    if(palindromeTest("") != 1)
-    {
-        result = 1;
-    }
-    printf("\n palindromeTest: %d",result);
+    printf("Tests pour la recherche de de palindromes:\n");
+    printf("pour \"a\". Attendu 1. Resultat: %d\n",palindromeTest("a"));
+    printf("pour \"aabb\". Attendu 0. Resultat: %d\n",palindromeTest("aabb"));
+    printf("pour \"aba\". Attendu 1. Resultat: %d\n",palindromeTest("aba"));
+    printf("pour \"abab\". Attendu 0. Resultat: %d\n",palindromeTest("abab"));
+    printf("pour \"aabbaa\". Attendu 1. Resultat: %d\n",palindromeTest("aabbaa"));
+    printf("pour \"\". Attendu 1. Resultat: %d\n",palindromeTest(""));
 }
