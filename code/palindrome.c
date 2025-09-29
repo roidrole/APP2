@@ -13,7 +13,7 @@ Description: Vérifie si le mot provenu est un palindrome
 // - le charactère doit être une lettre arabe minuscule
 // Postconditions: 
 // - Position de la première instance du charactère dans le tableau de charactères, ou -1
-int findChar(char word[], char character){
+int trouveChar(char word[], char character){
     int i = -1;
     do {
         i++;
@@ -29,8 +29,8 @@ int findChar(char word[], char character){
 // - le tableau de charactères doit contenir seulement des lettres arabes minuscules sans accents
 // Postconditions: 
 // - retourne 1 si le tableau de charactères contient un palindrome, et retourne 0 sinon
-int palindromeCheck(char string[]){
-    int stringLength = findChar(string,0);
+int palindromeTest(char string[]){
+    int stringLength = trouveChar(string,0);
     int j = stringLength;
     for(int i = 0;i < stringLength/2;i++)
     {
@@ -48,29 +48,29 @@ int palindromeCheck(char string[]){
 int main()
 {
     int result = 0;
-    if(palindromeCheck("a") != 1)
+    if(palindromeTest("a") != 1)
     {
         result = 1;
     }
-    if(palindromeCheck("aabb") != 0)
+    if(palindromeTest("aabb") != 0)
     {
         result = 1;
     }
-    if(palindromeCheck("aba") != 1)
+    if(palindromeTest("aba") != 1)
     {
         result = 1;
     }
-    if(palindromeCheck("abab") != 0)
+    if(palindromeTest("abab") != 0)
     {
         result = 1;
     }
-    if(palindromeCheck("aabbaa") != 1)
+    if(palindromeTest("aabbaa") != 1)
     {
         result = 1;
     }
-    if(palindromeCheck("") != 1)
+    if(palindromeTest("") != 1)
     {
         result = 1;
     }
-    printf("\n palindromeCheck: %d",result);
+    printf("\n palindromeTest: %d",result);
 }

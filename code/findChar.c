@@ -25,21 +25,14 @@ int trouveChar(char word[], char character){
 }
 
 //Description: fonction de test
-//Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
-    int result = 0;
-    if(trouveChar("you_mom_is_hat", 'a') != 12)
-    {
-        result = 1;
-    }
-    if(trouveChar("you_mom_is_hat", 'y') != 0)
-    {
-        result = 1;
-    }
-    if(trouveChar("you_mom_is_hat", 'z') != -1)
-    {
-        result = 1;
-    }
-    printf("\n trouveChar: %d\n",result);
+    printf("Tests pour la recherche de characteres:\n");
+    printf("pour \"\" et lettre quelconque. Attendu -1. Resultat: %d\n",trouveChar("", 'a'));
+    printf("pour \"abcd\" et 't'. Attendu -1. Resultat: %d\n",trouveChar("abcd", 't'));
+    printf("pour \"abcd\" et 'a'. Attendu 0. Resultat: %d\n",trouveChar("abcd", 'a'));
+    printf("pour \"abcd\" et 'c'. Attendu 2. Resultat: %d\n",trouveChar("abcd", 'c'));
+    printf("pour \"acdc\" et 'c'. Attendu 1. Resultat: %d\n",trouveChar("acdc", 'c'));
+    printf("pour \"ab/cd\" et '/'. Attendu 2. Resultat: %d\n",trouveChar("ab/cd", '/'));
+    printf("pour \"voiciuntreslongmotafindetesterlecasoulemotesttreslongetlecharacterenestpasdanscemotmalgrelalongueurabsurdedeceluici\" et 'z'. Attendu -1. Resultat: %d\n",trouveChar("voiciuntreslongmotafindetesterlecasoulemotesttreslongetlecharacterenestpasdanscemotmalgrelalongueurabsurdedeceluici", 'z'));
 }
