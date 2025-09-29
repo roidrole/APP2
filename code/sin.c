@@ -65,9 +65,9 @@ float sinus(float in){
 //Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
-    printf("Tests pour le sinus");
-    printf("Pour %f: Attendu: %f, Recu: %f\n", 0, sin(0), sinus(0));
-    printf("Pour %f: Attendu: %f, Recu: %f\n", 1, sin(1), sinus(1));
+    printf("Tests pour le sinus\n");
+    printf("Pour %f: Attendu: %f, Recu: %f\n", 0.0F, sin(0), sinus(0));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", 1.0F, sin(1), sinus(1));
     printf("Pour %f: Attendu: %f, Recu: %f\n", -PI, sin(-PI), sinus(-PI));
     printf("Pour %f: Attendu: %f, Recu: %f\n", PI, sin(PI), sinus(PI));
     printf("Pour %f: Attendu: %f, Recu: %f\n", PI/2, sin(PI/2), sinus(PI/2));
