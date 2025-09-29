@@ -7,10 +7,10 @@ Description: Additionne deux matrices de taille m par n.
 ********/
 #include <stdio.h>
 
-//Number of rows for addition
+//Nombre de lignes dans les matrices pour l’addition
 const int m = 3;
-//Number of columns of the matixes for addition
-const int n = 2;
+//Nombre de colonnes dans les matrices pour l’addition
+const int n = 3;
 
 // Description: fonction qui additionne deux matrices de taille m par n
 //Préconditions
@@ -53,7 +53,7 @@ int main()
         }
     }
     matrixAdder(a, b, out);
-    /*
+    
     int result = 0;
     int test[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
     for (int i = 0; i < m; i++){
@@ -64,19 +64,5 @@ int main()
             }
         }
     }
-    printf("matrixAdder: %d\n",result);*/
-    int attendu[m][n];
-    for(int i = 0; i < m; i++){
-        for(int j = 0; j < n; j++){
-            attendu[i][j] = m*n+1;
-        }
-    }
-    printf("\nMatrice A:\n");
-    matrixAddPrinter(a);
-    printf("\nMatrice B:\n");
-    matrixAddPrinter(b);
-    printf("\nResultat attendu:\n");
-    matrixAddPrinter(attendu);
-    printf("\nResultat:\n");
-    matrixAddPrinter(out);
+    printf("matrixAdder: %d\n",result);
 }
