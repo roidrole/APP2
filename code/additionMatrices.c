@@ -18,7 +18,7 @@ const int n = 3;
 // - les deux premières matrices doivent contenir des valeurs telles que leur somme est entre -2147483648 et 2147483647.
 //Postconditions : 
 //La matrice out contient des valeurs entre -2147483648 et 2147483647 qui sont la somme des valeurs de a et b.
-void matrixAdder(int a[m][n], int b[m][n], int out[m][n]){
+void matriceAddition(int a[m][n], int b[m][n], int out[m][n]){
     for (int row = 0; row < m; row++){
         for (int col = 0; col < n; col++){
             out[row][col] = a[row][col] + b[row][col];
@@ -26,7 +26,7 @@ void matrixAdder(int a[m][n], int b[m][n], int out[m][n]){
     }
 }
 
-void matrixAddPrinter(int matrice[m][n]){
+void matriceAddPrinter(int matrice[m][n]){
     for(int x = 0; x < m;x++)
     {
         for(int y = 0; y < n;y++)
@@ -52,7 +52,7 @@ int main()
             nombre++;
         }
     }
-    matrixAdder(a, b, out);
+    matriceAddition(a, b, out);
     
     int result = 0;
     int test[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
@@ -64,5 +64,5 @@ int main()
             }
         }
     }
-    printf("matrixAdder: %d\n",result);
+    printf("matriceAddition: %d\n",result);
 }

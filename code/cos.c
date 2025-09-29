@@ -9,12 +9,12 @@ Description: Calcule le cosinus d'une valeur
 #include <math.h>
 #include <stdio.h>
 
-//Une valeur supérieure à 6 brise la précondition de lib.fatorielle(2*i)
+//Une valeur supérieure à 6 brise la précondition de fatorielle(2*i)
 const int COS_SUMMAND_AMOUNT = 6;
 const float PI = 3.1415926535897932384626433832795;
 
 //Description: fonction qui calcule la factorielle d'un nombre
-//Préconditions : in <= 12 (integer overflow)
+//Préconditions : in <= 12 pour éviter de dépasser les limites du int
 //Postconditions : Entier qui est la factorielle de in
 int factorielle(int in) {
     int total = 1;
@@ -26,8 +26,8 @@ int factorielle(int in) {
 
 //Description: fonction qui calcule l'exposant
 //Préconditions : Des intrants tels que le résultat est inférieur à un très grand nombre. Les limites sont à la factorielle
-//Postconditions : Entier qui est la factorielle de in
-double exponent(double base, int exponent){
+//Postconditions : résultat du calcul de la puissance
+double puissance(double base, int exponent){
     if(exponent == 0){
         return 1;
     }
@@ -41,7 +41,7 @@ double exponent(double base, int exponent){
 //Description: fonction qui détermine le signe du prochain terme d'une série alternée
 //Préconditions : Entier
 //Postconditions : -1 (impair) ou 1 (pair)
-int getSign(int input){
+int signe(int input){
     if(input % 2 == 0){
         return 1;
     } else {
@@ -55,7 +55,7 @@ int getSign(int input){
 float cosinus(float in){
     float out = 0;
     for(int i = 0; i < COS_SUMMAND_AMOUNT; i++){
-        out += getSign(i)*exponent(in, 2*i)/factorielle(2*i);
+        out += signe(i)*puissance(in, 2*i)/factorielle(2*i);
     }
     return out;
 }
