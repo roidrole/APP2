@@ -28,6 +28,8 @@ void matriceMultiplie(int a[n][n], int b[n][n], int out[n][n]){
     }
 }
 
+//Description: affiche une matrice
+//Préconditions: matrice à afficher de taille n par n
 void matriceMultPrinter(int matrice[n][n]){
     for(int x = 0; x < n; x++)
     {

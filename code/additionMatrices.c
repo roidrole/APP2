@@ -26,6 +26,8 @@ void matriceAddition(int a[m][n], int b[m][n], int out[m][n]){
     }
 }
 
+//Description: affiche une matrice
+//Préconditions: matrice à afficher de taille m par n
 void matriceAddPrinter(int matrice[m][n]){
     for(int x = 0; x < m;x++)
     {
