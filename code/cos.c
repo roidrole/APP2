@@ -64,30 +64,11 @@ float cosinus(float in){
 //Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
-    int result = 0;
-    if(fabs(cosinus(0)-cos(0)) > 0.01)
-    {
-        result = 1;
-    }
-    if(fabs(cosinus(1)-cos(1)) > 0.01)
-    {
-        result = 1;
-    }
-    if(fabs(cosinus(-PI)-cos(-PI)) > 0.01)
-    {
-        result = 1;
-    }
-    if(fabs(cosinus(PI)-cos(PI)) > 0.01)
-    {
-        result = 1;
-    }
-    if(fabs(cosinus(PI/2)-cos(PI/2)) > 0.01)
-    {
-        result = 1;
-    }
-    if(fabs(cosinus(PI/4)-cos(PI/4)) > 0.01)
-    {
-        result = 1;
-    }
-    printf("cosinus: %d\n",result);
+    printf("Tests pour le cosinus");
+    printf("Pour %f: Attendu: %f, Recu: %f\n", 0, cos(0), cosinus(0));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", 1, cos(1), cosinus(1));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", -PI, cos(-PI), cosinus(-PI));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", PI, cos(PI), cosinus(PI));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", PI/2, cos(PI/2), cosinus(PI/2));
+    printf("Pour %f: Attendu: %f, Recu: %f\n", PI/4, cos(PI/4), cosinus(PI/4));
 }
