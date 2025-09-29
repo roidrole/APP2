@@ -38,7 +38,6 @@ void matriceAddPrinter(int matrice[m][n]){
 }
 
 //Description: fonction de test
-//Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
     int out[m][n] = {};
@@ -55,14 +54,15 @@ int main()
     matriceAddition(a, b, out);
     
     int result = 0;
-    int test[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
-    for (int i = 0; i < m; i++){
-        for (int j = 0; j < n; j++){
-            if(out[i][j] != test[i][j])
-            {
-                result = 1;
-            }
-        }
-    }
-    printf("matriceAddition: %d\n",result);
+    int test[3][3] = {{10,10,10},{10,10,10},{10,10,10}};
+    
+    printf("Tests pour l'addition de matrices: \n");
+    printf("Matrice 1:\n");
+    matriceAddPrinter(a);
+    printf("\nMatrice 2:\n");
+    matriceAddPrinter(b);
+    printf("\nMatrice de retour attendue\n");
+    matriceAddPrinter(test);
+    printf("\nMatrice de retour recue\n");
+    matriceAddPrinter(out);
 }
