@@ -58,11 +58,11 @@ int main()
 
     printf("Tests pour la multiplication de matrices: \n");
     printf("Matrice 1:\n");
-    matrixMultPrinter(a);
+    matriceMultPrinter(a);
     printf("\nMatrice 2:\n");
-    matrixMultPrinter(b);
+    matriceMultPrinter(b);
     printf("\nMatrice de retour attendue\n");
-    matrixMultPrinter(test);
+    matriceMultPrinter(test);
     printf("\nMatrice de retour recue\n");
-    matrixMultPrinter(out);
+    matriceMultPrinter(out);
 }
