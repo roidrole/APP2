@@ -10,7 +10,7 @@ Description: Calcule le sinus d'une valeur à deux décimales de précision.
 #include <stdio.h>
 
 //Une valeur supérieure à 6 brise la précondition de fatorielle(2*i)
-const int SIN_SUMMAND_AMOUNT = 5;
+const int SIN_SUMMAND_AMOUNT = 6;
 const float PI = 3.1415926535897932384626433832795;
 
 
