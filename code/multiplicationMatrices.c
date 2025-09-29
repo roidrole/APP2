@@ -28,6 +28,18 @@ void matrixMultiplier(int a[n][n], int b[n][n], int out[n][n]){
     }
 }
 
+void matrixMultPrinter(int matrice[n][n]){
+    for(int x = 0; x < n; x++)
+    {
+        for(int y = 0; y < n;y++)
+        {
+            printf("%d ", matrice[x][y]);
+        }
+        printf("\n");
+    }
+}
+
+
 //Description: fonction de test
 //Postconditions: 1 si le test échoue,  0 en réussite
 int main()

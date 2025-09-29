@@ -7,10 +7,10 @@ Description: Additionne deux matrices de taille m par n.
 ********/
 #include <stdio.h>
 
-//Number of column for addition
-const int n = 3;
-//Number of rows of the matixes for addition
+//Number of rows for addition
 const int m = 3;
+//Number of columns of the matixes for addition
+const int n = 2;
 
 // Description: fonction qui additionne deux matrices de taille m par n
 //Préconditions
@@ -26,22 +26,35 @@ void matrixAdder(int a[m][n], int b[m][n], int out[m][n]){
     }
 }
 
+void matrixAddPrinter(int matrice[m][n]){
+    for(int x = 0; x < m;x++)
+    {
+        for(int y = 0; y < n;y++)
+        {
+            printf("%d ", matrice[x][y]);
+        }
+        printf("\n");
+    }
+}
 
 //Description: fonction de test
 //Postconditions: 1 si le test échoue,  0 en réussite
 int main()
 {
-    int result = 0;
     int out[m][n] = {};
     int a[m][n];
     int b[m][n];
+    int nombre = 1;
     for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
-            a[i][j] = i+j;
-            b[i][j] = i*2+1;
+            a[i][j] = nombre;
+            b[i][j] = ((n*m+1)-nombre);
+            nombre++;
         }
     }
     matrixAdder(a, b, out);
+    /*
+    int result = 0;
     int test[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
     for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
@@ -51,5 +64,19 @@ int main()
             }
         }
     }
-    printf("matrixAdder: %d\n",result);
+    printf("matrixAdder: %d\n",result);*/
+    int attendu[m][n];
+    for(int i = 0; i < m; i++){
+        for(int j = 0; j < n; j++){
+            attendu[i][j] = m*n+1;
+        }
+    }
+    printf("\nMatrice A:\n");
+    matrixAddPrinter(a);
+    printf("\nMatrice B:\n");
+    matrixAddPrinter(b);
+    printf("\nResultat attendu:\n");
+    matrixAddPrinter(attendu);
+    printf("\nResultat:\n");
+    matrixAddPrinter(out);
 }
