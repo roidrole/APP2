@@ -57,7 +57,7 @@ int main()
         }
     }
     matriceMultiplie(a, b, out);
-    int test[3][3] = {{13,13,13},{22,22,22},{31,31,31}};
+    int attendue[3][3] = {{13,13,13},{22,22,22},{31,31,31}};
 
     printf("Tests pour la multiplication de matrices: \n");
     printf("Matrice 1:\n");
@@ -65,7 +65,27 @@ int main()
     printf("\nMatrice 2:\n");
     matriceMultPrinter(b);
     printf("\nMatrice de retour attendue\n");
-    matriceMultPrinter(test);
+    matriceMultPrinter(attendue);
+    printf("\nMatrice de retour recue\n");
+    matriceMultPrinter(out);
+
+
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            a[i][j] = 3*(i+j);
+            b[i][j] = j+9;
+        }
+    }
+    matriceMultiplie(a, b, out);
+    int attendue2[3][3] = {{81,90,99},{162,180,198},{243,270,297}};
+
+    printf("Tests pour la multiplication de matrices: \n");
+    printf("Matrice 1:\n");
+    matriceMultPrinter(a);
+    printf("\nMatrice 2:\n");
+    matriceMultPrinter(b);
+    printf("\nMatrice de retour attendue\n");
+    matriceMultPrinter(attendue2);
     printf("\nMatrice de retour recue\n");
     matriceMultPrinter(out);
 }
