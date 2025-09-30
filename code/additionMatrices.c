@@ -57,15 +57,36 @@ int main()
     }
     matriceAddition(a, b, out);
     
-    int test[3][3] = {{10,10,10},{10,10,10},{10,10,10}};
-    
-    printf("Tests pour l'addition de matrices: \n");
+    int attendue[3][3] = {{10,10,10},{10,10,10},{10,10,10}};
+
+    printf("Test pour l'addition de matrices: \n");
     printf("Matrice 1:\n");
     matriceAddPrinter(a);
     printf("\nMatrice 2:\n");
     matriceAddPrinter(b);
     printf("\nMatrice de retour attendue\n");
-    matriceAddPrinter(test);
+    matriceAddPrinter(attendue);
+    printf("\nMatrice de retour recue\n");
+    matriceAddPrinter(out);
+
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            a[i][j] = nombre-3;
+            b[i][j] = i+i+j;
+            nombre++;
+        }
+    }
+
+    int attendue2[3][3] = {{7,9,11},{12,14,16},{17,19,21}};
+
+    matriceAddition(a, b, out);
+    printf("\nAutre test pour l'addition de matrices: \n");
+    printf("Matrice 1:\n");
+    matriceAddPrinter(a);
+    printf("\nMatrice 2:\n");
+    matriceAddPrinter(b);
+    printf("\nMatrice de retour attendue\n");
+    matriceAddPrinter(attendue2);
     printf("\nMatrice de retour recue\n");
     matriceAddPrinter(out);
 }
