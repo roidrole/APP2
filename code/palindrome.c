@@ -13,7 +13,8 @@ Description: Vérifie si le mot provenu est un palindrome
 // - le charactère doit être une lettre arabe minuscule
 // Postconditions: 
 // - Position de la première instance du charactère dans le tableau de charactères, ou -1
-int trouveChar(char word[], char character){
+int trouveChar(char word[], char character)
+{
     int i = -1;
     do {
         i++;
@@ -29,7 +30,8 @@ int trouveChar(char word[], char character){
 // - le tableau de charactères doit contenir seulement des lettres arabes minuscules sans accents
 // Postconditions: 
 // - retourne 1 si le tableau de charactères contient un palindrome, et retourne 0 sinon
-int palindromeTest(char string[]){
+int palindromeTest(char string[])
+{
     int stringLength = trouveChar(string,0);
     int j = stringLength;
     for(int i = 0;i < stringLength/2;i++)

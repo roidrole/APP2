@@ -13,7 +13,8 @@ Description: trouve la position de première instance d'un charactère dans un t
 // - le charactère doit être une lettre arabe minuscule
 // Postconditions: 
 // - Position de la première instance du charactère dans le tableau de charactères, ou -1
-int trouveChar(char word[], char character){
+int trouveChar(char word[], char character)
+{
     int i = -1;
     do {
         i++;

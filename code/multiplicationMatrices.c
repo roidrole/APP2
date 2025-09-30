@@ -17,7 +17,8 @@ const int n = 3;
 // - les deux premières matrices doivent contenir des valeurs telles que les valeurs de la matrice produite soient toutes entre -2147483648 et 2147483647.
 // Postconditions: 
 // - La matrice out qui contient le produit des deux autres.
-void matriceMultiplie(int a[n][n], int b[n][n], int out[n][n]){
+void matriceMultiplie(int a[n][n], int b[n][n], int out[n][n])
+{
     for (int row = 0; row < n; row++){
         for (int col = 0; col < n; col++){
             out[row][col] = 0;
@@ -30,7 +31,8 @@ void matriceMultiplie(int a[n][n], int b[n][n], int out[n][n]){
 
 //Description: affiche une matrice
 //Préconditions: matrice à afficher de taille n par n
-void matriceMultPrinter(int matrice[n][n]){
+void matriceMultPrinter(int matrice[n][n])
+{
     for(int x = 0; x < n; x++)
     {
         for(int y = 0; y < n;y++)

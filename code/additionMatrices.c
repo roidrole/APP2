@@ -18,7 +18,8 @@ const int n = 3;
 // - les deux premières matrices doivent contenir des valeurs telles que leur somme est entre -2147483648 et 2147483647.
 //Postconditions : 
 //La matrice out contient des valeurs entre -2147483648 et 2147483647 qui sont la somme des valeurs de a et b.
-void matriceAddition(int a[m][n], int b[m][n], int out[m][n]){
+void matriceAddition(int a[m][n], int b[m][n], int out[m][n])
+{
     for (int row = 0; row < m; row++){
         for (int col = 0; col < n; col++){
             out[row][col] = a[row][col] + b[row][col];
@@ -28,7 +29,8 @@ void matriceAddition(int a[m][n], int b[m][n], int out[m][n]){
 
 //Description: affiche une matrice
 //Préconditions: matrice à afficher de taille m par n
-void matriceAddPrinter(int matrice[m][n]){
+void matriceAddPrinter(int matrice[m][n])
+{
     for(int x = 0; x < m;x++)
     {
         for(int y = 0; y < n;y++)

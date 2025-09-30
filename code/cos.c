@@ -16,7 +16,8 @@ const float PI = 3.1415926535897932384626433832795;
 //Description: fonction qui calcule la factorielle d'un nombre
 //Préconditions : in <= 12 pour éviter de dépasser les limites du int
 //Postconditions : Entier qui est la factorielle de in
-int factorielle(int in) {
+int factorielle(int in)
+{
     int total = 1;
     for(int i=1; i <= in;i++){
         total *= i;
@@ -27,7 +28,8 @@ int factorielle(int in) {
 //Description: fonction qui calcule l'exposant
 //Préconditions : Des intrants tels que le résultat est inférieur à un très grand nombre. Les limites sont à la factorielle
 //Postconditions : résultat du calcul de la puissance
-double puissance(double base, int exponent){
+double puissance(double base, int exponent)
+{
     if(exponent == 0){
         return 1;
     }
@@ -41,7 +43,8 @@ double puissance(double base, int exponent){
 //Description: fonction qui détermine le signe du prochain terme d'une série alternée
 //Préconditions : Entier
 //Postconditions : -1 (impair) ou 1 (pair)
-int signe(int input){
+int signe(int input)
+{
     if(input % 2 == 0){
         return 1;
     } else {
@@ -52,7 +55,8 @@ int signe(int input){
 //Description: fonction qui calcule le cosinus
 //Préconditions : La valeur entrante doit être entre -π et π
 //Postconditions : Retourne une valeur entre 1 et -1
-float cosinus(float in){
+float cosinus(float in)
+{
     float out = 0;
     for(int i = 0; i < COS_SUMMAND_AMOUNT; i++){
         out += signe(i)*puissance(in, 2*i)/factorielle(2*i);
