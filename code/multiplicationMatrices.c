@@ -79,7 +79,7 @@ int main()
     matriceMultiplie(a, b, out);
     int attendue2[3][3] = {{81,90,99},{162,180,198},{243,270,297}};
 
-    printf("Tests pour la multiplication de matrices: \n");
+    printf("\n\nSecond test: \n");
     printf("Matrice 1:\n");
     matriceMultPrinter(a);
     printf("\nMatrice 2:\n");
