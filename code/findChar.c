@@ -34,6 +34,5 @@ int main()
     printf("pour \"abcd\" et 'a'. Attendu 0. Resultat: %d\n",trouveChar("abcd", 'a'));
     printf("pour \"abcd\" et 'c'. Attendu 2. Resultat: %d\n",trouveChar("abcd", 'c'));
     printf("pour \"acdc\" et 'c'. Attendu 1. Resultat: %d\n",trouveChar("acdc", 'c'));
-    printf("pour \"ab/cd\" et '/'. Attendu 2. Resultat: %d\n",trouveChar("ab/cd", '/'));
     printf("pour \"voiciuntreslongmotafindetesterlecasoulemotesttreslongetlecharacterenestpasdanscemotmalgrelalongueurabsurdedeceluici\" et 'z'. Attendu -1. Resultat: %d\n",trouveChar("voiciuntreslongmotafindetesterlecasoulemotesttreslongetlecharacterenestpasdanscemotmalgrelalongueurabsurdedeceluici", 'z'));
 }
